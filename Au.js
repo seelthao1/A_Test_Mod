@@ -165,7 +165,7 @@ class Client {
 
     startBots(amount) {
         if (this.authorized) return this.startBots2();
-        amount > 200 ? amount = 200 : amount = amount;
+        amount > 500 ? amount = 500 : amount = amount;
         for (let i = 0; i < amount; i++) {
             this.bots.push(new Bot(this.protocolKey, window.client.botID, `wss://${window.MC.getHost()}:443?party_id=${window.MC.getPartyToken()}`, false));
             this.botID++;
